@@ -11,10 +11,9 @@
  *         this.left = left;
  *         this.right = right;
  *     }
- * }
- */
-class Solution {
-    private int max=0;
+ * }*/
+ class Solution {
+    private int max= 0;
     public int diameterOfBinaryTree(TreeNode root) {
         calculateHeight(root);
         return max;
@@ -25,7 +24,7 @@ class Solution {
         }
         int leftHeight = calculateHeight(node.left);
         int rightHeight = calculateHeight(node.right);
-        max= Math.max(max,leftHeight+rightHeight);
+        max= Math.max(max, leftHeight + rightHeight);
         return 1 + Math.max(leftHeight, rightHeight);
     }
 }
